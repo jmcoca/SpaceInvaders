@@ -1,5 +1,7 @@
 /**
- * Prueba github
+ * Prueba gitHub
+ * prueba 2 de github
+ * 
  */
 var game = new Phaser.Game(800, 600, Phaser.AUTO, 'space', { preload: preload, create: create, update: update });
 
@@ -47,7 +49,7 @@ function create() {
     balas = game.add.group();
     balas.enableBody = true;
     balas.physicsBodyType = Phaser.Physics.ARCADE;
-    balas.createMultiple(30, 'bala');
+    balas.createMultiple(2, 'bala');//No mas de dos balas a la vez. jmcoca
     balas.setAll('anchor.x', 0.5);
     balas.setAll('anchor.y', 1);
     balas.setAll('outOfBoundsKill', true);
@@ -87,7 +89,7 @@ function create() {
         naveImagen.alpha = 0.4;
     }
 	
-	ayudas = game.add.group();
+	ayudas = game.add.group();//ayudas
     ayudas.enableBody = true;
 	ayudas.physicsBodyType = Phaser.Physics.ARCADE;
 	game.physics.arcade.gravity.y = 50;
